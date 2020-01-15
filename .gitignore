@@ -5,4 +5,4 @@
 *.scss.map
 
 ### HTML ###
-*html..swap
+*.html.swp
