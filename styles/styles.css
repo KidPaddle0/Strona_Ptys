@@ -2,9 +2,8 @@
 body {
   font-family: "Lato", sans-serif;
   width: 100%;
-  background: url("../images/tlo.jpeg") no-repeat;
-  background-color: #00ffcc;
-  background-size: cover; }
+  margin: 0;
+  padding: 0; }
 
 nav {
   margin: auto;
@@ -62,6 +61,24 @@ nav {
   padding-right: 0px;
   margin: 0 auto;
   display: block; }
+
+.bg-layers {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative; }
+  .bg-layers .layer-00, .bg-layers .layer-01, .bg-layers .layer-02, .bg-layers .layer-03 {
+    width: 100%;
+    position: absolute; }
+  .bg-layers .layer-00 {
+    margin-top: -138px;
+    z-index: -2; }
+  .bg-layers .layer-01 {
+    z-index: -1; }
+  .bg-layers .layer-02 {
+    z-index: 1; }
+  .bg-layers .layer-03 {
+    z-index: 2; }
 
 .row {
   display: flex;
