@@ -3,6 +3,14 @@
 *.css.map
 *.sass.map
 *.scss.map
+*.sass.swp
+*.sass.swo
 
 ### HTML ###
 *.html.swp
+*.html.swo
+
+### All ###
+
+*.swp
+*.swo
