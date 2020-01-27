@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
 body {
   font-family: "Lato", sans-serif;
   width: 100%;
@@ -62,6 +67,12 @@ nav {
   margin: 0 auto;
   display: block; }
 
+.place_holder {
+  background-color: black;
+  height: 1000px;
+  content: " ";
+  margin: 800px auto; }
+
 .bg-layers {
   margin: 0;
   padding: 0;
@@ -76,9 +87,23 @@ nav {
   .bg-layers .layer-01 {
     z-index: -1; }
   .bg-layers .layer-02 {
-    z-index: 1; }
+    z-index: 0; }
   .bg-layers .layer-03 {
     z-index: 2; }
+
+.first_section_image {
+  width: 100%;
+  padding: 0;
+  position: relative; }
+
+.first_img {
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
+
+.first_title {
+  z-index: 10;
+  position: absolute; }
 
 .row {
   display: flex;
@@ -123,6 +148,6 @@ nav {
   width: 91.66%; }
 
 .col-12 {
-  width: 12%; }
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
