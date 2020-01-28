@@ -11,12 +11,28 @@ window.addEventListener('load', function(e){
     bg_img_first_section.style.marginTop= pos_4;
 
     const title_img_first_section = document.querySelector('.first_title');
-    pos_5 = bg + bg_img_first_section.clientHeight /3 + 'px';
+    pos_5 = bg + bg_img_first_section.clientHeight /2 + 'px';
     title_img_first_section.style.marginTop = pos_5;
 
     const bg_img_firs_section_width = bg_img_first_section.clientWidth;
     posX_5 = bg_img_first_section.clientWidth / 2 - 184 + 'px';
     title_img_first_section.style.marginLeft= posX_5;
+// treść pierwszej sekcji
+    const fs = document.querySelector('.fs_content');
+    let h = bg_img_first_section.clientHeight;
+    let th = h + bg -50 + 'px';
+    fs.style.marginTop = th;
+//obrazek tytułowy drugiej sekcji
+    const bg_img_second_section = document.querySelector('.bg_image_s2');
+    let pos_img_s2 = bg + fs.clientHeight + bg_img_first_section.clientHeight + 'px';
+    bg_img_second_section.style.marginTop = pos_img_s2;
+
+    const title_img_second_section = document.querySelector('.title_s2');
+    posX_title_s2 = bg_img_second_section.clientWidth / 2 - 184 + 'px';
+    posY_title_s2 = bg + fs.clientHeight + bg_img_first_section.clientHeight + bg_img_second_section.clientHeight + 'px';
+    title_img_second_section.style.marginLeft= posX_title_s2;
+    title_img_second_section.style.marginTop = posY_title_s2;
+
 
 
 });
@@ -25,7 +41,7 @@ window.addEventListener('resize', function(e){
     //Ustawianie warstw dla obrazka z tortem
     //oraz dynamiczne dostosowanie wysokości
     const image = document.querySelector('.layer-00');   //przypisanie do zmiennej 'image' elementu DOM 'layer-00' to jest tło
-    bg_height = image.clientHeight - 138;                      //pobranie z obiektu 'image' wysokości obrazka do zmiennej 'bg_height' i przesunięcie o wys. navbara
+    let bg_height = image.clientHeight - 138;                      //pobranie z obiektu 'image' wysokości obrazka do zmiennej 'bg_height' i przesunięcie o wys. navbara
     
     const ciasto = document.querySelectorAll('.ciasto');
     let len = ciasto.length;
@@ -49,6 +65,20 @@ window.addEventListener('resize', function(e){
     posX_5 = bg_img_firs_section_width / 2 - 184 + 'px';
     title_img_first_section.style.marginLeft= posX_5;
 
+    const fs = document.querySelector('.fs_content');
+    let h = bg_img_first_section.clientHeight;
+    let th = h + bg_height -50 + 'px';
+    fs.style.marginTop = th;
+
+    const bg_img_second_section = document.querySelector('.bg_image_s2');
+    let pos_img_s2 = bg_height + fs.clientHeight + bg_img_first_section.clientHeight -50 + 'px';
+    bg_img_second_section.style.marginTop = pos_img_s2;
+
+    const title_img_second_section = document.querySelector('.title_s2');
+    posX_title_s2 = bg_img_second_section.clientWidth / 2 - 184 + 'px';
+    posY_title_s2 = posY_title_s2 = bg_height + fs.clientHeight + bg_img_first_section.clientHeight + bg_img_second_section.clientHeight + 'px';
+    title_img_second_section.style.marginLeft= posX_title_s2;
+    title_img_second_section.style.marginTop = posY_title_s2;
 });
 
 window.addEventListener('scroll', function(e) {
