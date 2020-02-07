@@ -136,6 +136,75 @@ nav {
   z-index: 10;
   position: absolute; }
 
+.ss_content {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background-image: url("../images/tlo_sekcja2.png");
+  -webkit-box-shadow: 0px -20px 44px 6px rgba(20, 45, 61, 0.75);
+  -moz-box-shadow: 0px -20px 44px 6px rgba(20, 45, 61, 0.75);
+  box-shadow: 0px -20px 44px 6px rgba(20, 45, 61, 0.75); }
+  .ss_content .content_1 {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .ss_content .ss_img {
+    width: 100%; }
+  .ss_content .ss_text {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    padding: 40px 0px; }
+  .ss_content .ss_txt_2 {
+    margin-top: 10%; }
+  .ss_content .karuzela {
+    margin: 100px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+    .ss_content .karuzela img {
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px; }
+
+.motto {
+  position: absolute;
+  height: 110vh;
+  background-color: #fff;
+  z-index: 9; }
+  .motto .motto_img {
+    width: 100%;
+    margin: 25% 0; }
+  .motto .motto_title {
+    position: absolute; }
+
+.kontakt {
+  position: relative;
+  z-index: 5; }
+  .kontakt .footer_img {
+    position: absolute;
+    z-index: -1; }
+    .kontakt .footer_img img {
+      width: 100%; }
+  .kontakt .footer_content {
+    position: absolute;
+    z-index: 1; }
+
+#kontakt_logo {
+  margin: 0 auto; }
+
+#kontent {
+  margin: 20px auto;
+  text-align: center; }
+  #kontent ul li {
+    list-style-type: none;
+    color: white;
+    font-size: 2em;
+    padding: 5px 0; }
+  #kontent ul a {
+    text-decoration: none;
+    font-size: 2.5em;
+    color: white;
+    padding: 10px; }
+
 .row {
   display: flex;
   width: 100%; }

@@ -11,6 +11,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<link rel="manifest" href="images/site.webmanifest">
+	<script src="https://kit.fontawesome.com/2f6ec0fc9a.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -22,9 +23,9 @@
 		    </div>
 		    <div class="menu-content">
 			<ul class="menu-list">
-			    <li class="list-item"><a href="#">O nas</a></li>
-			    <li class="list-item"><a href="#">Oferta</a></li>
-			    <li class="list-item"><a href="#">Kontakt</a></li>
+			    <li class="list-item"><a href="#ONas">O nas</a></li>
+			    <li class="list-item"><a href="#Oferta">Oferta</a></li>
+			    <li class="list-item"><a href="#Kontakt">Kontakt</a></li>
 			    <li class="list-item"><a href="#">Blog</a></li>
 			</ul>
 		    </div>
@@ -41,7 +42,7 @@
 	    <div class="fist_section_img pos">
 		<img class="first_img parallax" src="images/parallax01.jpg" alt="Hands" data-value="-2.0">
 	    </div>
-	    <div class="first_section_title">
+	    <div class="first_section_title" id="ONas">
 		<img class="first_title parallax" src="images/o_nas.png" alt="Title" data-value="-2.5">
 	    </div>
 	</div>
@@ -68,11 +69,123 @@
 	    </div>
 	</div>
 	<!-- second section title image -->
-	<div class="container col-12">
+	<div class="container col-12" id="Oferta">
 	    <img class="bg_image_s2 parallax" src="images/oferta.jpg" alt="Oferta" data-value="-2.0">
 	    <img class="title_s2 parallax" src="images/oferta.png" alt="Oferta_title" data-value="-2.5">
 	</div>
-	<footer> 
+	<!-- second section content -->
+	<div class="container ss_content parallax" data-value="-1.95">
+	    <div class="row content_1">
+		<div class="col-4">
+    		    <img class="ss_img" src="images/coffe_cake.jpg">
+		</div>
+		<div class="col-4">
+		    <p class="ss_text ss_txt_1">Jako że lubimy podejmować wyzwania w naszej ofercie znajdują się tradycyjne wypieki pasujące
+			do niedzielnej popołudniowej kawy jak i wymyśle torty na każdą okazję.</p>
+		    <p class="ss_text ss_txt_2">Zajmujemy się również obsługą imprez temetycznych m.in. beaby shower, roczek czy wesela.</p>
+		</div>
+		<div class="col-4">
+		    <img class="ss_img" src="images/cake.jpg">
+		</div>
+	    </div>
+	    <div class="row row-karuzela">
+		<div class="col-12 karuzela">
+		    <img src="images/item00.jpg">
+		    <img src="images/item01.jpg">
+		    <img src="images/item02.jpg">
+		    <img src="images/item03.jpg">
+		</div>
+	    </div>
+	</div>
+	<div class="container motto parallax" data-value="-2.0">
+	    <div class="row motto2">
+		<div class="motto_title">
+		    <img src="images/motto.png">
+		</div>
+		<div class="col-1"></div>
+		<div class="col-5">
+		    <img class="motto_img" src="images/motto1.jpg">
+		</div>
+		<div class="col-5">
+		    <img class="motto_img" src="images/motto2.jpg">
+		</div>
+		<div class="col-1"></div>
+	    </div>
+	</div>
+
+	<!-- KONTAKT -->
+
+	<footer class="container kontakt parallax" id="Kontakt" data-value="-2.0">
+	    <div class="row">
+		<div class="col-12">
+		    <div class="footer_img">
+			<img src="images/kontakt.png">
+		    </div>
+		</div>
+	    </div>
+	    <div class="row footer_content">
+		<div class="col-1"></div>
+		<div class="col-10" id="kontent">
+		    <!-- 
+		    <div class="row"> 
+		    <div class="row">
+			<div class="col-12">
+			    <img id="kontakt_logo" src="images/Logo_Ptys_white_b.png">
+			</div>
+			<div class="row">
+			<div class="col-12">
+			<img id="zapraszamy" src="images/zapraszamy.png">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-12">
+			<p>Cukiernia Ptyś</p>
+			<p>ul. Sukiennicza 12</p>
+			<p>87-100 Toruń</p>
+			</div>
+			</div>
+		    </div>
+		    <div class="row">
+			<div class="col-6">
+			    <i class="fas fa-mobile-alt"></i><p>525-678-123</p>
+			</div>
+			<div class="col-6">
+			    <i class="fas fa-at"></i><p>kontakt@pyts.pl</p>
+			</div>
+		    </div>
+		    <div class="row">
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-wordpress"></i>
+		    </div> 
+		    -->
+
+		    <!-- a może lista? -->
+		    <ul>
+			<li><img id="kontakt_logo" src="images/Logo_Ptys_white_b.png"></li>
+			<li><img id="zapraszamy" src="images/zapraszamy.png"></li>
+			<li><p>Cukiernia Ptyś</p><p>ul. Sukiennicza 12</p><p>87-100 Toruń</p></li>
+			<li class="text">
+			    <div class="row">
+			    <div class="col-2"></div>
+			    <div class="col-4">
+			    <div class="icons"><i class="fas fa-mobile-alt"></i><p>525-678-123</p></div>
+			    </div>
+			    <div class="col-4">
+			    <div class="icons"><i class="fas fa-at"></i><p>kontakt@pyts.pl</p></div>
+			    </div>
+			    <div class="col-2"></div>
+			    </div>
+			</li>
+			<li>
+			    <a href="#"><i class="fab fa-facebook-square"></i></a>
+			    <a href="#"><i class="fab fa-instagram"></i></a>
+			    <a href="#"><i class="fab fa-wordpress"></i></a>
+			</li>
+		    </ul>
+		<div>
+		<div class="col-1"></div>
+	    </div>
 	</footer>
 
 	<script src="script/script.js"></script>
