@@ -14,36 +14,25 @@
 	<script src="https://kit.fontawesome.com/2f6ec0fc9a.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-	<nav style="position= sticki;">
+    <body style="background-color: black" onload="">
+	
+	<!-- Menu -->
+	<div class="wrap-nav">
+	<nav>
 	    <div class="logo">
 		<a href="#"><img id="logo_img"src="images/Logo_Ptys_white.png" alt="LOGO"></a>
 	    </div>
-	    <div class="menu-content">
-	        <ul class="menu-list">
-		       <li class="list-item"><a href="#ONas">O nas</a></li>
-		       <li class="list-item"><a href="#Oferta">Oferta</a></li>
-		       <li class="list-item"><a href="#Kontakt">Kontakt</a></li>
-		       <li class="list-item"><a href="#">Blog</a></li>
-		</ul>
-	    </div>
+	    <ul class="menu-list">
+	        <li class="list-item"><a href="#ONas">O nas</a></li>
+		<li class="list-item"><a href="#Oferta">Oferta</a></li>
+		<li class="list-item"><a href="#Kontakt">Kontakt</a></li>
+		<li class="list-item"><a href="#">Blog</a></li>
+	    </ul>
 	</nav>
-	<header class="nav-header">
-	    <div class="container">
-		<!-- <nav >
-		    <div class="logo">
-			<a href="#"><img id="logo_img"src="images/Logo_Ptys_white.png" alt="LOGO"></a>
-		    </div>
-		    <div class="menu-content">
-			<ul class="menu-list">
-			    <li class="list-item"><a href="#ONas">O nas</a></li>
-			    <li class="list-item"><a href="#Oferta">Oferta</a></li>
-			    <li class="list-item"><a href="#Kontakt">Kontakt</a></li>
-			    <li class="list-item"><a href="#">Blog</a></li>
-			</ul>
-		    </div>
-		</nav> -->
-	    </div>
+	</div>
+
+	<!-- Parallax dla pierwszego obrazka -->
+	<header>
 	    <div class="bg-layers">
 		<img class="layer-00 parallax" src="images/warstwa03.png" alt="Warstwa0" data-value="-1.3">
 		<img class="layer-01 parallax ciasto" src="images/Warstwa02.png" alt="Warstwa1" data-value="-1.4">
@@ -51,16 +40,18 @@
 		<img class="layer-03 parallax ciasto pos" src="images/Warstwa00.png" alt="Warstwa3" data-value="-2">
 	    </div>
 	</header>
+
+	<!-- Obrazek tytułowy dla pierwszej sekcji -->
 	<div class="first_section col-12">
 	    <div class="fist_section_img pos">
-		<img class="first_img parallax" src="images/parallax01.jpg" alt="Hands" data-value="-2.0">
+		<img class="first_img parallax test" src="images/parallax01.jpg" alt="Hands" data-value="-2.0">
 	    </div>
 	    <div class="first_section_title" id="ONas">
 		<img class="first_title parallax" src="images/o_nas.png" alt="Title" data-value="-2.5">
 	    </div>
 	</div>
 	<!-- Content of first section -->
-	<div class="container fs_content parallax" data-value="-1.95">
+	<div class="container fs_content parallax test" data-value="-1.95">
 	    <div class="row">
 		<div class="col-8 tekst">
 		    <p>Uwielbiamy słodycze jak przystało na małe czekoladowe łasuchy. Praca w kuchni
@@ -83,11 +74,11 @@
 	</div>
 	<!-- second section title image -->
 	<div class="container col-12" id="Oferta">
-	    <img class="bg_image_s2 parallax" src="images/oferta.jpg" alt="Oferta" data-value="-2.0">
+	    <img class="bg_image_s2 parallax test" src="images/oferta.jpg" alt="Oferta" data-value="-2.0">
 	    <img class="title_s2 parallax" src="images/oferta.png" alt="Oferta_title" data-value="-2.5">
 	</div>
 	<!-- second section content -->
-	<div class="container ss_content parallax" data-value="-1.95">
+	<div class="container ss_content parallax test" data-value="-1.95">
 	    <div class="row content_1">
 		<div class="col-4">
     		    <img class="ss_img" src="images/coffe_cake.jpg">
@@ -111,7 +102,7 @@
 	    </div>
 	</div>
 	<div class="container motto parallax" data-value="-2.0">
-	    <div class="row motto2">
+	    <div class="row motto2 test">
 		<div class="motto_title">
 		    <img src="images/motto.png">
 		</div>
@@ -128,7 +119,7 @@
 
 	<!-- KONTAKT -->
 
-	<footer class="container kontakt parallax" id="Kontakt" data-value="-2.0">
+	<footer class="container kontakt parallax test" id="kontakt" data-value="-2.0">
 	    <div class="row">
 		<div class="col-12">
 		    <div class="footer_img">
@@ -139,41 +130,6 @@
 	    <div class="row footer_content">
 		<div class="col-1"></div>
 		<div class="col-10" id="kontent">
-		    <!-- 
-		    <div class="row"> 
-		    <div class="row">
-			<div class="col-12">
-			    <img id="kontakt_logo" src="images/Logo_Ptys_white_b.png">
-			</div>
-			<div class="row">
-			<div class="col-12">
-			<img id="zapraszamy" src="images/zapraszamy.png">
-			</div>
-			</div>
-			<div class="row">
-			<div class="col-12">
-			<p>Cukiernia Ptyś</p>
-			<p>ul. Sukiennicza 12</p>
-			<p>87-100 Toruń</p>
-			</div>
-			</div>
-		    </div>
-		    <div class="row">
-			<div class="col-6">
-			    <i class="fas fa-mobile-alt"></i><p>525-678-123</p>
-			</div>
-			<div class="col-6">
-			    <i class="fas fa-at"></i><p>kontakt@pyts.pl</p>
-			</div>
-		    </div>
-		    <div class="row">
-			<i class="fab fa-facebook-square"></i>
-			<i class="fab fa-instagram"></i>
-			<i class="fab fa-wordpress"></i>
-		    </div> 
-		    -->
-
-		    <!-- a może lista? -->
 		    <ul>
 			<li><img id="kontakt_logo" src="images/Logo_Ptys_white_b.png"></li>
 			<li><img id="zapraszamy" src="images/zapraszamy.png"></li>
@@ -201,6 +157,7 @@
 	    </div>
 	</footer>
 
-	<script src="script/script.js"></script>
+	<!-- <script src="script/script.js"></script>-->
+	<script src="script/set_position.js"></script>
     </body>
 </html>

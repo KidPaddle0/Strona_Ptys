@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1800px)
+    .list-item:nth-child(1)
+        margin-left: 20%
+    .list-item:nth-child(4)
+        margin-right: 16%
+
+@media only screen and (max-width: 1500px)
+    .list-item:nth-child(1)
+        margin-left: 12%
+    .list-item:nth-child(4)
+        margin-right: 8%
+
+@media only screen and (max-width: 1200px)
+    .list-item:nth-child(1)
+        margin-left: 5%
+    .list-item:nth-child(4)
+        margin-right: 2%
+
+@media only screen and (max-width: 1000px)
+    .wrap-nav
+        transition: width 0.5s, height 0.5s, font-size 0.5s 
+        all: revert
+        .logo
+            width: 150px
+            height: 150px
+            margin-left: -70px
+            img
+                width: 100%
+                height: auto
+                -webkit-transition: width 1.5s, height 1.5s
+                transition: width 1.5s, height 1.5s
+
+    .list-item
+        padding-top: 0px
+        a
+            font-size: 1.5em
+            -webkit-transition: font-size 1.5s
+            transition: font-size 1.5s
+
+    .list-item:nth-child(1)
+        margin-left: 8%
