@@ -1,0 +1,51 @@
+#nextImg, #prevImg
+    background-color: rgba(255,255,255,0.6)
+    width: 80px
+    height: 80px
+    border-radius: 40px
+    z-index: 6
+    transition: all 0.2s
+    bottom: 500px
+    
+.button
+    font-size: 6em
+    color: rgba(0,0,0,0.6)
+    margin: auto
+
+#nextImg:hover, #prevImg:hover
+    background-color: rgba(255,255,255,0.9)
+    //width: 90px
+    //height: 90px
+    border-radius: 45px
+    cursor: pointer
+
+#nextImg
+    margin: auto auto -210px 94%
+    position: absolute
+    i
+        padding-left: 10px
+
+#prevImg
+    position: absolute
+    margin: auto auto -210px 2%
+    i
+        padding-right: 10px
+
+#gallery
+    position: relative
+    overflow: hidden
+
+.karuzela
+    height: 450px
+    padding: 10px 0
+    display: flex
+    margin: 100px 0
+    width: max-content
+    background-color: rgba(0,0,0,.6)
+    
+    img
+        padding: 0
+        margin: 0
+        height: 100%
+    img:hover
+        filter: blur(0.4)

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+html {
+  scroll-behavior: smooth; }
+
 * {
   border: 0;
   padding: 0;
@@ -14,9 +17,12 @@ body {
 nav {
   position: fixed;
   margin: auto;
-  z-index: 3;
+  z-index: 6;
   width: 100%; }
   nav .menu-list {
+    background-color: var(--background);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     margin: 0;
     padding: 80px 0 0;
     list-style: none;
@@ -40,21 +46,27 @@ nav {
   margin-right: 22%; }
 
 .menu-list a {
-  color: white;
+  color: var(--font-color);
   font-size: 2em;
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
   padding: 10px 30px;
-  -webkit-transition: font-size 1.5s;
-  transition: font-size 1.5; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
 
 .wrap-nav {
+  --font-color: #feffe3;
+  --background: rgba(255,255,255,0);
+  z-index: 5;
   width: 100%;
   position: relative;
-  transition: width 0.5s, height 0.5s, font-size 0.5s; }
+  transition: all 0.5s; }
   .wrap-nav .logo {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: var(--background);
     border-radius: 1000px;
     width: 250px;
     height: 250px;
@@ -65,7 +77,27 @@ nav {
     margin-left: -100px;
     text-align: center; }
     .wrap-nav .logo #logo_img {
-      padding-top: 30px; }
+      padding-top: 30px;
+      width: 90%;
+      height: 90%;
+      transition: all 0.3s; }
+
+.is-scrolled {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  --background: #27110e; }
+  .is-scrolled .logo {
+    width: 100px;
+    height: 100px;
+    margin-left: -40px;
+    transition: all 0.5s; }
+    .is-scrolled .logo img {
+      padding-top: 5px !important;
+      width: 90%;
+      height: 90%; }
+  .is-scrolled .menu-list {
+    padding: 10px;
+    transition: all 0.3s; }
 
 @media only screen and (max-width: 1800px) {
   .list-item:nth-child(1) {
@@ -108,15 +140,18 @@ nav {
 
   .list-item:nth-child(1) {
     margin-left: 8%; } }
-.menu-list a {
-  -webkit-transition: background-color 0.7s, color 0.5s;
-  transition: background-color 0.7s, color 0.5s; }
-
-.menu-list li a:hover {
-  background-color: rgba(255, 255, 255, 0.65);
-  color: #333333;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s; }
+.menu-list {
+  --font-color: #feffe3;
+  --font-inverse: #333333;
+  --box-light: rgba(254,255,277,0.65); }
+  .menu-list a {
+    -webkit-transition: background-color 0.7s, color 0.5s;
+    transition: background-color 0.7s, color 0.5s; }
+  .menu-list li a:hover {
+    background-color: var(--box-light);
+    color: var(--font-inverse);
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; }
 
 .container {
   padding-left: 0px;
@@ -133,17 +168,27 @@ nav {
     width: 100%;
     position: absolute; }
   .bg-layers .layer-00 {
-    margin-top: -138px;
     z-index: -2; }
   .bg-layers .layer-01 {
     z-index: -1; }
   .bg-layers .layer-02 {
     z-index: 0; }
   .bg-layers .layer-03 {
-    z-index: 2; }
+    z-index: 6; }
+  .bg-layers .layer-04 {
+    width: 100%;
+    position: absolute;
+    z-index: 4; }
+
+.layer-03::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: blue;
+  width: 100%;
+  height: 100px; }
 
 .first_section_image {
-  width: 100%;
   padding: 0;
   position: relative; }
 
@@ -153,7 +198,7 @@ nav {
   z-index: 1; }
 
 .first_title {
-  z-index: 10;
+  z-index: 3;
   position: absolute; }
 
 .fs_content {
@@ -171,21 +216,23 @@ nav {
       color: #333333ff;
       padding: 10px; }
   .fs_content img {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .fs_content {
   -webkit-box-shadow: 0px -12px 80px 2px rgba(39, 17, 14, 0.75), 0px 27px 80px 2px rgba(39, 17, 14, 0.75);
   -moz-box-shadow: 0px -12px 80px 2px rgba(39, 17, 14, 0.75), 0px 27px 80px 2px rgba(39, 17, 14, 0.75);
   box-shadow: 0px -12px 80px 2px rgba(39, 17, 14, 0.75), 0px 27px 80px 2px rgba(39, 17, 14, 0.75); }
 
-.bg_image_s2 {
-  width: 100%;
-  position: absolute;
-  z-index: 1; }
-
-.title_s2 {
-  z-index: 10;
+#Oferta {
   position: absolute; }
+  #Oferta .bg_image_s2 {
+    width: 100%;
+    position: absolute;
+    z-index: 1; }
+  #Oferta .title_s2 {
+    z-index: 2;
+    position: absolute; }
 
 .ss_content {
   position: absolute;
@@ -198,7 +245,8 @@ nav {
   .ss_content .content_1 {
     background-color: rgba(0, 0, 0, 0.6); }
   .ss_content .ss_img {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
   .ss_content .ss_text {
     font-size: 1.5em;
     text-align: center;
@@ -207,20 +255,11 @@ nav {
     padding: 40px 0px; }
   .ss_content .ss_txt_2 {
     margin-top: 10%; }
-  .ss_content .karuzela {
-    margin: 100px 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); }
-    .ss_content .karuzela img {
-      text-align: center;
-      margin: 0 auto;
-      padding: 20px; }
 
 .motto2 {
   position: absolute;
-  height: 110vh;
   background-color: #fff;
-  z-index: 9; }
+  z-index: 4; }
   .motto2 .motto_img {
     width: 100%;
     margin: 25% 0; }
@@ -229,33 +268,82 @@ nav {
 
 .kontakt {
   position: absolute;
-  z-index: 5; }
+  z-index: 3; }
   .kontakt .footer_img {
     position: relative;
     z-index: -1; }
     .kontakt .footer_img img {
       width: 100%; }
   .kontakt .footer_content {
-    position: relative;
+    position: absolute;
     z-index: 1; }
 
 #kontakt_logo {
   margin: 0 auto; }
 
 #kontent {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   #kontent ul {
     padding-top: 80px; }
     #kontent ul li {
       list-style-type: none;
       color: white;
-      font-size: 2em;
       padding: 5px 0; }
     #kontent ul a {
       text-decoration: none;
       font-size: 2.5em;
       color: white;
       padding: 10px; }
+
+#nextImg, #prevImg {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  z-index: 6;
+  transition: all 0.2s;
+  bottom: 500px; }
+
+.button {
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.6);
+  margin: auto; }
+
+#nextImg:hover, #prevImg:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 45px;
+  cursor: pointer; }
+
+#nextImg {
+  margin: auto auto -210px 94%;
+  position: absolute; }
+  #nextImg i {
+    padding-left: 10px; }
+
+#prevImg {
+  position: absolute;
+  margin: auto auto -210px 2%; }
+  #prevImg i {
+    padding-right: 10px; }
+
+#gallery {
+  position: relative;
+  overflow: hidden; }
+
+.karuzela {
+  height: 450px;
+  padding: 10px 0;
+  display: flex;
+  margin: 100px 0;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .karuzela img {
+    padding: 0;
+    margin: 0;
+    height: 100%; }
+  .karuzela img:hover {
+    filter: blur(0.4); }
 
 .row {
   display: flex;
